@@ -20,7 +20,7 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweatherapi/maskcon
 -u $ae_username:$ae_password
 ```
 
-####Step 3: Debug session through Apigee Trace Tool and inspect the request variable
+####Step 3: Data mask request parameters and inspect value through Apigee Trace Tool
 
 ```
 curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
