@@ -23,7 +23,7 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 #### Step 3: Data mask request parameters and inspect value through Apigee Trace Tool
 Test the API resource running this command:
 ```
-curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
+curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -H 'user-agent:TEST-VALUE' -H 'password:tobeEncrypted' -v
 ```
 ![Data Mask Request Params](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png?dl=1 "Data Mask Request Params")
 
@@ -82,3 +82,38 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 -u $ae_username:$ae_password
 ```
 ![Data Mask Response after XMLtoJSON](https://www.dropbox.com/s/nmyhkwjkbwsbf8t/DataMask-Response-XMLtoJSON.png?dl=1 "Data Mask Response after XMLtoJSON")
+
+#### Step 5: Data mask request headers
+```
+curl -H "Content-type:text/xml" -X POST -d \
+'<MaskDataConfiguration name="default">
+  <Variables>
+      <Variable>request.queryparam.w</Variable>
+      <Variable>request.header.user-agent</Variable>
+      <Variable>request.header.password</Variable>
+  </Variables>
+  <XPathsResponse>
+    <XPathResponse>/rss/channel/title</XPathResponse>
+    <XPathResponse>/rss/channel/language</XPathResponse>
+    <XPathResponse>/rss/channel/lastBuildDate</XPathResponse>
+    <XPathResponse>/rss/channel/ttl</XPathResponse>
+    <XPathResponse>/rss/channel/description</XPathResponse>
+  </XPathsResponse>
+  <JSONPathsResponse>
+    <JSONPathResponse>$.rss.channel[*].title</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel[*].language</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.lastBuildDate</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.ttl</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.description</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.link</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.description</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.units.speed</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.units.temperature</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.units.distance</JSONPathResponse>
+    <JSONPathResponse>$.rss.channel.units.pressure</JSONPathResponse>
+  </JSONPathsResponse>  
+</MaskDataConfiguration>' \
+https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-masking/maskconfigs \
+-u $ae_username:$ae_password
+```
+![Data Mask Request Headers](https://www.dropbox.com/s/89pv0aoinutj44a/DataMask-RequestHeaders.png?dl=1 "Data Mask Request Headers")
