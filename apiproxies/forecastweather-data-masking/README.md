@@ -26,7 +26,7 @@ Test the API resource running this command:
 ```
 curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
 ```
-![alt text](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png?dl=1 "Logo Title Text 1")
+![Data Mask Request Params](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png?dl=1 "Data Mask Request Params")
 
 #### Step 4: Data mask response body elements
 Note TODO
@@ -36,17 +36,15 @@ curl -H "Content-type:text/xml" -X POST -d \
   <Variables>
       <Variable>request.queryparam.w</Variable>
   </Variables>
-  <JSONPathsResponse>
-      <JSONPathResponse>$.rss.channel[*].title</JSONPathResponse>
-      <JSONPathResponse>$.rss.version</JSONPathResponse>
-      <JSONPathResponse>$.rss.channel.link</JSONPathResponse>
-      <JSONPathResponse>$.rss.channel.description</JSONPathResponse>
-      <JSONPathResponse>$.rss.channel.units.speed</JSONPathResponse>
-      <JSONPathResponse>$.rss.channel.units.temperature</JSONPathResponse>
-      <JSONPathResponse>$.rss.channel.units.distance</JSONPathResponse>
-      <JSONPathResponse>$.rss.channel.units.pressure</JSONPathResponse>
-  </JSONPathsResponse>  
+  <XPathsResponse>
+    <XPathResponse>/rss/channel/title</XPathResponse>
+    <XPathResponse>/rss/channel/language</XPathResponse>
+    <XPathResponse>/rss/channel/lastBuildDate</XPathResponse>
+    <XPathResponse>/rss/channel/ttl</XPathResponse>
+    <XPathResponse>/rss/channel/description</XPathResponse>
+  </XPathsResponse>
 </MaskDataConfiguration>' \
 https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-masking/maskconfigs \
 -u $ae_username:$ae_password
 ```
+![Data Mask Response](https://www.dropbox.com/s/6i65ccwl0lfeu5l/DataMask-Response.png?dl=1 "Data Mask Response")
