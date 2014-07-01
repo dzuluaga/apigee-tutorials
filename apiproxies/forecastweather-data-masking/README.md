@@ -3,12 +3,12 @@
 
 The following tutorial provides the steps to enable data masking on Apigee Edge for a specific API bundle. For more details refer to [Apigee Data Masking official documentation](http://apigee.com/docs/api-services/content/data-masking).
 
-#### Step 1: Deploy forecastweather-data-masking
+####Deploy forecastweather-data-masking
 The first thing you'll need is to deploy forecastweather-data-masking API Proxy bundle. This bundle will be used to apply some of the data masking techniques explained here.
 
 **Note Maven pom.xml artifact and shared-pom.xmlcan be easily deployed by using [Apigee Deploy Maven Plugin](https://github.com/apigee/apigee-deploy-maven-plugin). 
 
-#### Step 2: Add data masks to a specific element
+####Add data masks to a specific element
 ```
 curl -H "Content-type:text/xml" -X POST -d \
 '<MaskDataConfiguration name="default">
@@ -20,14 +20,14 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 -u $ae_username:$ae_password
 ```
 
-#### Step 3: Data mask request parameters and inspect value through Apigee Trace Tool
+####Data mask request parameters and inspect value through Apigee Trace Tool
 Test the API resource running this command:
 ```
 curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -H 'user-agent:TEST-VALUE' -H 'password:tobeEncrypted' -v
 ```
 ![Data Mask Request Params](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png?dl=1 "Data Mask Request Params")
 
-#### Step 4: Data mask response body elements - Backend Response
+####Data mask response body elements - Backend Response
 Note Trace session must be restarted, so the Data Masking configurations are effective in a new session.
 
 ```
@@ -49,7 +49,7 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 ```
 ![Data Mask Response](https://www.dropbox.com/s/6i65ccwl0lfeu5l/DataMask-Response.png?dl=1 "Data Mask Response")
 
-#### Step 5: Data mask response body elements after XMLtoJSON transformation
+####Data mask response body elements after XMLtoJSON transformation
 Since after conversion from XML to JSON the payload will still show elements in clear text, it is necessary to apply data masking through JSONPathResponse.
 ```
 curl -H "Content-type:text/xml" -X POST -d \
@@ -83,7 +83,8 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 ```
 ![Data Mask Response after XMLtoJSON](https://www.dropbox.com/s/nmyhkwjkbwsbf8t/DataMask-Response-XMLtoJSON.png?dl=1 "Data Mask Response after XMLtoJSON")
 
-#### Step 5: Data mask request headers
+####Data mask request headers
+
 ```
 curl -H "Content-type:text/xml" -X POST -d \
 '<MaskDataConfiguration name="default">
