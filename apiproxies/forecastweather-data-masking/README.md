@@ -28,7 +28,7 @@ curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
 ![Data Mask Request Params](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png?dl=1 "Data Mask Request Params")
 
 #### Step 4: Data mask response body elements
-Note Trace session must be restarted, so the Data Masking configurations are effective in a new Debug session.
+Note Trace session must be restarted, so the Data Masking configurations are effective in a new session.
 ```
 curl -H "Content-type:text/xml" -X POST -d \
 '<MaskDataConfiguration name="default">
