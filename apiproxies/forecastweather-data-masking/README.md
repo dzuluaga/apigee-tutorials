@@ -23,7 +23,7 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweatherapi/maskcon
 ####Step 3: Debug session through Apigee Trace Tool and inspect the request variable
 
 ```
-#Execute this command
 curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
 
 ```
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
