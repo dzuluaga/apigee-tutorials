@@ -21,7 +21,6 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 ```
 
 #### Step 3: Data mask request parameters and inspect value through Apigee Trace Tool
-
 Test the API resource running this command:
 ```
 curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
@@ -29,7 +28,7 @@ curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
 ![Data Mask Request Params](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png?dl=1 "Data Mask Request Params")
 
 #### Step 4: Data mask response body elements
-Note TODO
+Note Trace session must be restarted, so the Data Masking configurations are effective in a new Debug session.
 ```
 curl -H "Content-type:text/xml" -X POST -d \
 '<MaskDataConfiguration name="default">
