@@ -26,4 +26,4 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweatherapi/maskcon
 curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -v
 
 ```
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png "Logo Title Text 1")
