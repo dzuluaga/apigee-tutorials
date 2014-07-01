@@ -24,7 +24,8 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 ####Data mask request parameters and inspect value through Apigee Trace Tool
 Test the API resource running this command:
 ```
-curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 -H 'user-agent:TEST-VALUE' -H 'password:tobeEncrypted' -v
+curl https://testmyapi-test.apigee.net/weathercheck/forecastrss\?w\=2502265 \
+-H 'user-agent:TEST-VALUE' -H 'password:tobeEncrypted' -v
 ```
 ![Data Mask Request Params](https://www.dropbox.com/s/i5cr1v5h8yi5ful/Data-Mask-Request-Parameters.png?dl=1 "Data Mask Request Params")
 
