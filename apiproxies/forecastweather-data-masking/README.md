@@ -84,6 +84,7 @@ https://api.enterprise.apigee.com/v1/o/testmyapi/apis/forecastweather-data-maski
 ![Data Mask Response after XMLtoJSON](https://www.dropbox.com/s/nmyhkwjkbwsbf8t/DataMask-Response-XMLtoJSON.png?dl=1 "Data Mask Response after XMLtoJSON")
 
 ####Data mask request headers
+Note request.header.user-agent and password headers.
 
 ```
 curl -H "Content-type:text/xml" -X POST -d \
