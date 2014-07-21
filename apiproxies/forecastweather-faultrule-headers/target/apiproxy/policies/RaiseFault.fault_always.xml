@@ -1,0 +1,13 @@
+<RaiseFault name="RaiseFault.fault_always">
+  <FaultResponse>
+   <Copy source="response">  <!-- source is optional.. default is message -->
+      <Headers />
+   </Copy>  	
+    <Set>
+      <Payload contentType="text/plain">Contact support at support@mycompany.com.</Payload>
+      <StatusCode>401</StatusCode>
+      <ReasonPhrase>Unauthorized</ReasonPhrase>
+    </Set>
+  </FaultResponse>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

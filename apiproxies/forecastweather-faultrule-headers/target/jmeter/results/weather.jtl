@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="202" lt="202" ts="1405972844080" s="true" lb="WEATHER-1-1 - valid location (woeid) - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="2981">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="200" lt="200" ts="1405972844307" s="true" lb="WEATHER-1-2 - valid location (woeid) - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="2884">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="154" lt="153" ts="1405972844823" s="true" lb="WEATHER-1-3 - weather at maine - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="2958">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="114" lt="114" ts="1405972844982" s="true" lb="WEATHER-1-4 - invalid location (woed) - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="801">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="139" lt="139" ts="1405972845829" s="true" lb="WEATHER-1-1 - valid location (woeid) - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="2981">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="132" lt="132" ts="1405972846824" s="true" lb="WEATHER-1-2 - valid location (woeid) - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-4" dt="text" by="2883">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="68" lt="68" ts="1405972846961" s="true" lb="WEATHER-1-3 - weather at maine - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-4" dt="text" by="2958">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+<httpSample t="139" lt="139" ts="1405972847822" s="true" lb="WEATHER-1-4 - invalid location (woed) - WEATHER-1 WEATHER API - DEV" rc="200" rm="OK" tn="Thread Group 1-5" dt="text" by="801">
+  <assertionResult>
+    <name>responseHeader200OKAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Found City Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>Negative Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+</httpSample>
+
+</testResults>
