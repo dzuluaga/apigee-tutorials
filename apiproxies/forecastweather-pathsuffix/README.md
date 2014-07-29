@@ -16,7 +16,7 @@ The first thing you'll notice is that the target, Yahoo Weather Web Service is r
 curl https://testmyapi-test.apigee.net/weatherpathsuffix/weather/forecastrss?w=2502265 -v
 ```
 
-**Hint:** 
+**Notes:** 
 * Check target.copy.pathsuffix variable set to false in the [AssignMessage Policy](https://github.com/dzuluaga/apigee-tutorials/blob/master/apiproxies/forecastweather-pathsuffix/apiproxy/policies/AssignMessage.DisableTargetCopyPathSuffix.xml#L3) executed in Target Preflow. The purpose of this variable is to supress setting path suffix to the target. 
 * Check [URL](https://github.com/dzuluaga/apigee-tutorials/blob/master/apiproxies/forecastweather-pathsuffix/apiproxy/targets/default.xml#L15) definition in TargetConnection. Note URL includes basepath to the resource.
 * Note query params are set regardless target.copy.pathsuffix is set to false.
