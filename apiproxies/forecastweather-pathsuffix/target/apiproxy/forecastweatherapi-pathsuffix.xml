@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><APIProxy name="forecastweatherapi-pathsuffix" revision="1">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1406646416201</CreatedAt>
+    <CreatedBy>dzuluaga@apigee.com</CreatedBy>
+    <Description>ApigeeCorporation git: b9d2bdde Diegos-MacBook-Pro.local ::ApigeeCorporation git: 2f2067c3 Diegos-MacBook-Pro.local ::Recommended Forecast Weather API</Description>
+    <DisplayName>forecastweatherapi-pathsuffix</DisplayName>
+    <LastModifiedAt>1406646416201</LastModifiedAt>
+    <LastModifiedBy>dzuluaga@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Message-1</Policy>
+        <Policy>AssignMessage.DisableTargetCopyPathSuffix</Policy>
+        <Policy>xmltojson-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

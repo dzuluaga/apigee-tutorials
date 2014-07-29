@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-1">
+    <DisplayName>Assign Message 1</DisplayName>
+    <Set>
+        <Headers>
+          <Header name="ENV">TEST</Header>  
+        </Headers>
+        <QueryParams/>
+        <FormParams/>
+        <Verb/>
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
