@@ -1,6 +1,6 @@
 #forecastweather-faultrule-headers
 
-The following API bundle provides an example for handling pathsuffix with Target connection without writing any custom code to rewrite the target url (basepath or query params).
+The following API bundle provides an example for handling pathsuffix with Target connection without having to write any custom code to rewrite the target url (basepath or query params).
 
 ####Deploy forecastweather-pathsuffix
 The first thing you'll need is to deploy forecastweather-pathsuffix API Proxy bundle.
