@@ -1,4 +1,4 @@
-#forecastweather-faultrule-headers
+#forecastweather-pathsuffix
 
 The following API bundle provides an example for handling pathsuffix with Target connection without having to write any custom code to rewrite the target url (basepath or query params).
 
