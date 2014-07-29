@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [forecastweather-data-masking](#forecastweather-data-masking)
+      - [Deploy forecastweather-data-masking](#deploy-forecastweather-data-masking)
+      - [Add data masks to a specific element](#add-data-masks-to-a-specific-element)
+      - [Data mask request parameters and inspect value through Apigee Trace Tool](#data-mask-request-parameters-and-inspect-value-through-apigee-trace-tool)
+      - [Data mask response body elements - Backend Response](#data-mask-response-body-elements---backend-response)
+      - [Data mask response body elements after XMLtoJSON transformation](#data-mask-response-body-elements-after-xmltojson-transformation)
+      - [Data mask request headers](#data-mask-request-headers)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 #forecastweather-data-masking
 
 The following tutorial provides the steps to enable data masking on Apigee Edge for a specific API bundle. Since Apigee Trace Tool is a consumer app of the Debug API, Data Masking will also apply to it.
