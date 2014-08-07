@@ -30,9 +30,6 @@ else
 		credentials=$(echo $ae_authentication)
 fi
 
-creds=`echo -n abc | base64`
-echo $creds
-
 # list current revisions for this environment
 echo curl -H "Authorization:Basic $credentials" https://api.enterprise.apigee.com/v1/o/$org/environments/$environment/apis/$application/deployments
 curl -H "Authorization:Basic $credentials" https://api.enterprise.apigee.com/v1/o/$org/environments/$environment/apis/$application/deployments
