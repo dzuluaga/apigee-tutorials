@@ -29,6 +29,9 @@ POST https://:host/v1/organizations/:org/apimodels/:model/revisions?action=impor
 #### Import a revision in Swagger format
 curl https://api.enterprise.apigee.com/v1/o/{org}/apimodels/{model}/revisions\?action\=import\&format\=swagger -X POST -d 'URL=http://petstore.swagger.wordnik.com/api/api-docs' -u $ae_username:$ae_password -v -H 'Content-Type:text/plain'
 
+** Important: Note URL is the base URL instead of individual resources.**
+![Swagger Correct Path](https://www.dropbox.com/s/n1sg8d7omz3c6bz/Swagger_Correct_URL.png?dl=1)
+
 #### Get model revisions
 curl https://api.enterprise.apigee.com/v1/o/{org}/apimodels/{model}/revisions -u $ae_username:$ae_password
 
