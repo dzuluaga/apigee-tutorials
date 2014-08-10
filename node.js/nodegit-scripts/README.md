@@ -6,7 +6,7 @@ This step will install nodegit for this node.js app. nodegit is the only depende
 Run ```npn install```
 
 #### Run it
-Run ```node runtests```
+Run ```node getCommitEntries```
 
 You'll see these entries generate by plain JavaScript.
 ```
