@@ -1,0 +1,14 @@
+{
+  "name": "nodegit-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "runtests.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodegit": "^0.1.4"
+  }
+}
