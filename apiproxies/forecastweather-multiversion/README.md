@@ -13,34 +13,35 @@ See [Apigee Deploy Grunt.js Plugin](https://github.com/apigeecs/apigee-deploy-gr
 
 will produce
 
-``` {
+
+      {
          "version": "/v1/",
          "comments" : "entering v1 flow"
       }
-```
+
 
 ### Test /v2/testbasepath
 
-```curl https://testmyapi-test.apigee.net/v2/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
+
+curl https://testmyapi-test.apigee.net/v2/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
 
 will produce
 
-```
+
       {
          "version": "/v2/",
          "comments" : "entering v2 flow"
       }
-```
+
 
 ### Test /testbasepath - no version value
 
-```curl https://testmyapi-test.apigee.net/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
+curl https://testmyapi-test.apigee.net/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
 
 will produce
 
-```
+
       {
          "version": "/testbasepath/",
          "comments": "Catch-All"
       }
-```
