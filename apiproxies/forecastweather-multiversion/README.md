@@ -1,4 +1,4 @@
-ForecastWeather API Proxy to support multiple API version
+ForecastWeather API Proxy to support multiple API versions
 =====
 This Apigee API bundle provides an example of how to deal with API that should support multiple versions. A good practice for API versioning is described here [Your API Versioning is Wrong](http://java.dzone.com/articles/your-api-versioning-wrong). So, this bundle can handle multiple base paths e.g. /v1/testbasepath, /v2/testbasepath, /*/testbasepath, as well as /testbasepath. Internally, it has multiple flow and a catch all for flows that have no version in URL (/version). As described in the article above, your API should support at least URL and Header versioning.
 
