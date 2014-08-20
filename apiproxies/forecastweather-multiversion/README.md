@@ -36,7 +36,7 @@ will produce
 
 ### Test /testbasepath - no version value
 
-curl https://testmyapi-test.apigee.net/testbasepath/forecastrss\?w\=2502265\&u\=c -v
+```curl https://testmyapi-test.apigee.net/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
 
 will produce
 
