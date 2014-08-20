@@ -13,10 +13,7 @@ See [Apigee Deploy Grunt.js Plugin](https://github.com/apigeecs/apigee-deploy-gr
 
 will produce
 
-```< test: Header Name Test
-< 
-
-      {
+``` {
          "version": "/v1/",
          "comments" : "entering v1 flow"
       }
@@ -28,9 +25,7 @@ will produce
 
 will produce
 
-```< test: Header Name Test
-< 
-
+```
       {
          "version": "/v2/",
          "comments" : "entering v2 flow"
@@ -44,9 +39,6 @@ will produce
 will produce
 
 ```
-< test: Header Name Test
-< 
-
       {
          "version": "/testbasepath/",
          "comments": "Catch-All"
