@@ -10,7 +10,9 @@ See [Apigee Deploy Grunt.js Plugin](https://github.com/apigeecs/apigee-deploy-gr
 ### Test /v1/testbasepath
 
 ```curl https://testmyapi-test.apigee.net/v1/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
+
 will produce
+
 ```< test: Header Name Test
 < 
 
@@ -23,7 +25,9 @@ will produce
 ### Test /v2/testbasepath
 
 ```curl https://testmyapi-test.apigee.net/v2/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
+
 will produce
+
 ```< test: Header Name Test
 < 
 
@@ -36,7 +40,9 @@ will produce
 ### Test /testbasepath - no version value
 
 ```curl https://testmyapi-test.apigee.net/testbasepath/forecastrss\?w\=2502265\&u\=c -v```
+
 will produce
+
 ```
 < test: Header Name Test
 < 
