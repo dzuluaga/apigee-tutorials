@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <FaultRules/>
+                <Name>JavaScript-Extract-API-Version</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="Flow-v1">
+            <Description/>
+            <Request/>
+            <Response>
+                <Step>
+                    <FaultRules/>
+                    <Name>Assign-Message-Verify-Version-Header-v1</Name>
+                </Step>
+            </Response>
+            <Condition>(version = "/v1/")</Condition>
+        </Flow>
+        <Flow name="Flow-v2">
+            <Description/>
+            <Request/>
+            <Response>
+                <Step>
+                    <FaultRules/>
+                    <Name>Assign-Message-Verify-Version-Header-v2</Name>
+                </Step>
+            </Response>
+            <Condition>(version = "/v2/")</Condition>
+        </Flow>
+        <Flow name="Flow-Catch-All">
+            <Description/>
+            <Request/>
+            <Response>
+                <Step>
+                    <FaultRules/>
+                    <Name>Assign-Message-Catch-All-Version</Name>
+                </Step>
+            </Response>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <FaultRules/>
+                <Name>Assign-Message-Header</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>**testbasepath</BasePath>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

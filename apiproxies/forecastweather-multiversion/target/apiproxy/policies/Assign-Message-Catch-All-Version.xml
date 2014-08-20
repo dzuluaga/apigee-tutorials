@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Catch-All-Version">
+    <DisplayName>Assign Message Catch All Version</DisplayName>
+    <FaultRules/>
+    <Set>
+      <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+      {
+         "version": "@version#",
+         "comments": "Catch-All"
+      }
+      </Payload>
+    </Set>
+  
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

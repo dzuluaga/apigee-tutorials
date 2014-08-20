@@ -1,0 +1,9 @@
+/**
+* Retrieve version from basepath example /v1/testbasepath, /v2/testbasepath, will extract v1 or v2.
+**/
+
+var re = new RegExp("^/(?:\\.|[^/\\\\])*/");
+
+var myArray = re.exec(context.getVariable('request.path'));
+
+context.setVariable('version', myArray[0])

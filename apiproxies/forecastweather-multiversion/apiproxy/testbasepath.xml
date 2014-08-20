@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="testbasepath">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt>1408546498106</CreatedAt>
+    <CreatedBy>dzuluaga@apigee.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>testbasepath</DisplayName>
+    <LastModifiedAt>1408552678597</LastModifiedAt>
+    <LastModifiedBy>dzuluaga@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Message-Catch-All-Version</Policy>
+        <Policy>Assign-Message-Header</Policy>
+        <Policy>Assign-Message-Verify-Version-Header-v1</Policy>
+        <Policy>Assign-Message-Verify-Version-Header-v2</Policy>
+        <Policy>Assign-Message-Verify-Version-Header</Policy>
+        <Policy>JavaScript-Check-Version</Policy>
+        <Policy>JavaScript-Extract-API-Version</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JavaScript-1</Resource>
+        <Resource>jsc://JavaScript-Extract-API-Version</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

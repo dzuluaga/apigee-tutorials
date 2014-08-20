@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Verify-Version-Header-v2">
+    <DisplayName>Assign Message Verify Version Header v2</DisplayName>
+    <FaultRules/>
+
+    <Set>
+      <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+      {
+         "version": "@version#",
+         "comments" : "entering v2 flow"
+      }
+      </Payload>
+    </Set>
+
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
