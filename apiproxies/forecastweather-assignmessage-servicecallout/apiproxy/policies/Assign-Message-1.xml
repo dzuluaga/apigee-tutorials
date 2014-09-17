@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-1">
+    <DisplayName>Assign Message 1</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+        <Verb>GET</Verb>
+      	<Path>/forecastrss?w=2442047&amp;u=c</Path>
+          <QueryParams>
+            <QueryParam name="w">2442047</QueryParam>
+            <QueryParam name="u">c</QueryParam>            
+          </QueryParams>   
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="true" transport="http" type="request">request1</AssignTo>
+</AssignMessage>

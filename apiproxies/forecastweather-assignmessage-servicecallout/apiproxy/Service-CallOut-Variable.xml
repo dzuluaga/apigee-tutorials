@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="Service-CallOut-Variable">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1410970681470</CreatedAt>
+    <CreatedBy>dzuluaga@apigee.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>Service-CallOut-Variable</DisplayName>
+    <LastModifiedAt>1410984409594</LastModifiedAt>
+    <LastModifiedBy>dzuluaga@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Message-1</Policy>
+        <Policy>Assign-Message-WOEID</Policy>
+        <Policy>Service-Callout-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

@@ -1,0 +1,13 @@
+
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="Service-Callout-1">
+    <DisplayName>Service Callout 1</DisplayName>
+  	<Request clearPayload="true" variable="request1">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+  
+    </Request> 
+    <Response>response</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+      <URL>http://{URL}</URL><!-- ?w=2442047&amp;u=c -->
+    </HTTPTargetConnection>
+</ServiceCallout>
