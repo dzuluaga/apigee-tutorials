@@ -5,7 +5,7 @@
     <Properties/>
     <Set>
         <Verb>GET</Verb>
-      	<Path>/forecastrss?w=2442047&amp;u=c</Path>
+      	<Path>/forecastrss</Path>
           <QueryParams>
             <QueryParam name="w">2442047</QueryParam>
             <QueryParam name="u">c</QueryParam>            
