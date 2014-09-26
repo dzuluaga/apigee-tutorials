@@ -1,0 +1,3 @@
+[submodule "apiproxies/forecastweather-assignmessage-servicecallout-common/common"]
+	path = apiproxies/forecastweather-assignmessage-servicecallout-common/common
+	url = git@github.com:dzuluaga/apigee-tutorials.git

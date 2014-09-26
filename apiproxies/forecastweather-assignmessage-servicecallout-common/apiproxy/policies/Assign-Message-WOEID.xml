@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-WOEID">
+    <DisplayName>Assign Message WOEID</DisplayName>
+    <FaultRules/>
+	<!-- <Set>
+    	<Path>/forecastrss?w=2442047&amp;u=c</Path>
+    	<Verb>GET</Verb> 
+    </Set>  -->
+    <AssignVariable>
+        <Name>URL</Name>
+      	<Value>weather.yahooapis.com</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  	<AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
