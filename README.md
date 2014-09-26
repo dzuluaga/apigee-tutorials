@@ -66,4 +66,4 @@ git submodule update
 ```
 
 #####Step 8: Enable Apigee Grunt.js Deploy plugin to include, and replace fragments from common Git submodule - TODO
-[String-replace task in Gruntfile.js](https://github.com/apigeecs/apigee-deploy-grunt-plugin/blob/master/Gruntfile.js#L112) can be configured to manage this replacements by configuring it according to [String Replace NPM Module](https://www.npmjs.org/package/grunt-string-replace#simple-inline-content).
+[String-replace task in Gruntfile.js](https://github.com/apigeecs/apigee-deploy-grunt-plugin/blob/master/Gruntfile.js#L112) can be configured to manage these replacements by configuring it according to [String Replace NPM Module](https://www.npmjs.org/package/grunt-string-replace#simple-inline-content).
