@@ -1,4 +1,4 @@
-Apigee Delegating Token Management
+Apigee Delegated Token Management
 =========
 
 ##Music OAuth 2.0 Delegated Authentication API Bundle
