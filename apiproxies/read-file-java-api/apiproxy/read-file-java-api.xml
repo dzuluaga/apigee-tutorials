@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="read-file-java-api">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt>1384727595303</CreatedAt>
+    <CreatedBy>dzuluaga@apigee.com</CreatedBy>
+    <Description>@@DESCRIPTION TO BE REPLACED BY GITHUB ID</Description>
+    <DisplayName>weather</DisplayName>
+    <LastModifiedAt>1384727595303</LastModifiedAt>
+    <LastModifiedBy>dzuluaga@apigee.com</LastModifiedBy>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <validate>false</validate>
+</APIProxy>
