@@ -48,7 +48,7 @@ You can also debug the content of the response by enabling Apigee Trace Tool to 
 ![Reading API Proxy files from Java Callout Policy](https://www.dropbox.com/s/gtjm6gpdzfvvmub/testmyapi_-_Apigee_and_read-file-java-api_js_%E2%80%94_apiproxies.png?dl=1 "Reading API Proxy files from Java Callout Policy")
 
 ####How to automate generation of templates.jar file
-This step eliminates manual changes to compress the content of templates.jar file included under apiproxy/resources/java folder. So, any files stored under java/templates will be included in the templates.jar file generated under java/lib folder. This is achieved by Gruntfile compress/templates task.
+This step eliminates manual changes to compress the content of templates.jar file included under apiproxy/resources/java folder. So, any files stored under java/templates will be included in the templates.jar file generated under java/lib folder. This is achieved by Gruntfile.js compress:templates task.
 
 ### Deploying API bundle with Grunt.js
 This API Bundle can be deployed by leveraging [Apigee Deploy Grunt.js Plugin](https://github.com/apigeecs/apigee-deploy-grunt-plugin) or via any tool that can import Apigee proxy bundles.
