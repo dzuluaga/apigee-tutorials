@@ -88,6 +88,15 @@ module.exports = function(grunt) {
 							},[
 								{expand: true, cwd: './target/node/resources/', src: ['**'], dest: 'resources/' }, // makes all src relative to cwd
 							]),
+			"templates" : {
+				options : {
+					mode : 'zip',
+					archive : "java/lib/templates.jar"
+				},
+				files: [
+					{expand: true, cwd: 'java/templates/', src: ['**'], dest: 'templates/' }, // makes all src relative to cwd
+				]
+				},
 			main: {
 				options: {
 					mode : 'zip',
@@ -97,15 +106,6 @@ module.exports = function(grunt) {
 					{expand: true, cwd: 'target/apiproxy/', src: ['**'], dest: 'apiproxy/' }, // makes all src relative to cwd
 					]
 				},
-			"templates" : {
-				options : {
-					mode : 'zip',
-					archive : "java/lib/templates.jar"
-				},
-				files: [
-					{expand: true, cwd: 'java/templates/', src: ['**'], dest: 'templates/' }, // makes all src relative to cwd
-				]
-				}
 		},
 		// task for configuration management: search and replace elements within XML files
 		xmlpoke: apigee_conf.xmlconfig(grunt.option('env'), grunt),
