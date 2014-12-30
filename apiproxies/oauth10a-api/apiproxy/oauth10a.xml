@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="oauth-1a-2-legged">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1419905930247</CreatedAt>
+    <CreatedBy>dzuluaga@apigee.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>oauth-1a-2-legged</DisplayName>
+    <LastModifiedAt>1419907552412</LastModifiedAt>
+    <LastModifiedBy>dzuluaga@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>OAuth-v10a-Generate-Access-Token</Policy>
+        <Policy>OAuth-v10a-Verifier</Policy>
+        <Policy>OAuth-v10a</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="request-token">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>OAuth-v10a</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/request-token&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+        <Flow name="access-token">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>OAuth-v10a-Generate-Access-Token</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/access-token&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+        <Flow name="verifier">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>OAuth-v10a-Verifier</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/verifier&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+        <Flow name="verify access token">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>OAuth-v10a-Verify-Access-Token</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/get&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request>
+        </Request>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/oauth10a</BasePath>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="OAuthTargetRoute">
+        <Condition>(proxy.pathsuffix MatchesPath "/get") and (request.verb = "GET")</Condition>
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

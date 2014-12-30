@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV1 async="false" continueOnError="false" enabled="true" name="OAuth-v10a-Verifier">
+    <DisplayName>OAuth v1.0a Verifier</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <RequestToken ref="request.header.requesttoken"/>
+    <AppUserId ref="request.header.appuserid"/>
+    <VerifierCode ref="request.header.verifiercode"/>  
+    <Operation>GenerateVerifier</Operation>
+    <GenerateResponse enabled="true">
+        <Format>XML</Format>
+    </GenerateResponse>
+    <GenerateErrorResponse enabled="true">
+        <Format>XML</Format>
+        <Realm></Realm>
+    </GenerateErrorResponse>
+</OAuthV1>

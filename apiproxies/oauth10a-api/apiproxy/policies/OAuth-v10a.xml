@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV1 async="false" continueOnError="false" enabled="true" name="OAuth-v10a">
+    <DisplayName>OAuth v1.0a Generate Request Token</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Operation>GenerateRequestToken</Operation>
+    <GenerateResponse enabled="true">
+        <Format>XML</Format>
+    </GenerateResponse>
+    <GenerateErrorResponse enabled="true">
+        <Format>XML</Format>
+        <Realm></Realm>
+    </GenerateErrorResponse>
+</OAuthV1>
