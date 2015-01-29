@@ -26,3 +26,9 @@ $ curl http://127.0.0.1:8888/test?async=paralell
 ```
 
 **execution time is seconds: 0.789**
+
+##### Deploy to apigee
+
+```bash
+apigeetool deploynodeapp -n 'apigee-nodejs-async' -d . -m app.js -b '/apigee-nodejs-async' -u $ae_username -o testmyapi -e test -p $ae_password -R
+```
