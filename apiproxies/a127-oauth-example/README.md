@@ -2,6 +2,13 @@ a127-oauth-example
 =====
 Example of a127 oauth with volos.
 
+#### Testing
+
+```bash
+$ curl -X POST "http://localhost:10010/accesstoken" -d "grant_type=client_credentials&client_id=GYSoDHfMSsUCMN13wCzMt5kRDhAZnlex&client_secret=H3gfWzco0qOz9gn0"
+
+```
+
 References
 =====
 
