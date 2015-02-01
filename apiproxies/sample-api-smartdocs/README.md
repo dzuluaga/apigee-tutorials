@@ -22,6 +22,10 @@ Remove [field_wordnick_model_authschemes] by editing the API page, open API page
 Apigee SmartDocs API
 ==========
 
+#### Explore SmartDocs API with POSTMAN
+Download [SmartDocsAPI_PostmanCollection.json](./SmartDocsAPI_PostmanCollection.json) and import it into a new collection in POSTMAN.
+
+
 #### Import a revision in Swagger format
 curl https://api.enterprise.apigee.com/v1/o/{org}/apimodels/{model}/revisions\?action\=import\&format\=swagger -X POST -d 'URL=http://petstore.swagger.wordnik.com/api/api-docs' -u $ae_username:$ae_password -v -H 'Content-Type:text/plain'
 
