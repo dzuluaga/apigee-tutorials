@@ -15,3 +15,7 @@ curl http://testmyapi-test.apigee.net/diego-nock-mock
 
 {"_id":"123ABC","_rev":"946B7D1C","username":"dzuluaga","email":"dzuluaga@apigee.com"}
 ```
+
+#####References
+- For more ideas on this topic [Mocking API Requests in Node tests](http://javascriptplayground.com/blog/2013/08/mocking-web-requests/).
+- [Nock on NPM](https://www.npmjs.com/package/nock)
