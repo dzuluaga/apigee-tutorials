@@ -1,0 +1,14 @@
+{
+  "name": "apigee-nock-mock",
+  "version": "1.0.0",
+  "description": "This is an example of an Apigee API Proxy leveraging mock",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nock": "^0.59.1"
+  }
+}
