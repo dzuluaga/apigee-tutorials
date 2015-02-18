@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <Flows/>
+    <ScriptTarget>
+        <Arguments/>
+        <EnvironmentVariables/>
+        <ResourceURL>node://app.js</ResourceURL>
+        <Properties/>
+    </ScriptTarget>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <FaultRules/>
+                <Name>Assign-Message</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+</TargetEndpoint>
