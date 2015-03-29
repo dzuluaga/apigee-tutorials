@@ -1,0 +1,14 @@
+{
+  "name": "npm-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-package1": "https://npmrepouser:passw0rd@testmyapi-test.apigee.net/npm-private-repo-proxy/npm-package1-1.0.0.tgz"
+  }
+}
