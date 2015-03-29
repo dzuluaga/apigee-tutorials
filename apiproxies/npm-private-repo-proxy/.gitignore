@@ -1,0 +1,8 @@
+
+/node_modules
+target/
+!target/npm-private-repo-proxy.zip
+report.xml
+checkstyle.xml
+results.html
+results.txt
