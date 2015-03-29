@@ -1,6 +1,7 @@
 
 /node_modules
 target/
+!target/api-proxy-nodejs-basic-auth.zip
 report.xml
 checkstyle.xml
 results.html

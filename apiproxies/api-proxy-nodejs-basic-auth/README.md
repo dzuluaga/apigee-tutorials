@@ -3,13 +3,13 @@ Apigee Node.js Api Proxy with Basic Authentication
 This API Proxy provides a sample of Basic Authentication in Apigee as a Node.js app.
 
 #### Test
-Try this [URL](https://testmyapi-test.apigee.net/node-basic-auth/tree.jpg). This resource is protected with Basic Authentication. Use username 'testUser' and password 'testPass'.
+Try loading these resources: [static resources/images](https://testmyapi-test.apigee.net/node-basic-auth/tree.jpg), [dynamic resources](https://testmyapi-test.apigee.net/node-basic-auth/forecastweather_node/2502265). This resource is protected with Basic Authentication. Use username 'testUser' and password 'testPass'.
 
 #### How it works
-The following code is the only element that is necessary to protect resources with Basic Authentication. Please keep in mind that you can also leverage [Apigee Developer Model](http://apigee.com/docs/management/apis/get/organizations/%7Borg_name%7D/developers/%7Bdeveloper_email%7D/apps/%7Bapp_name%7D) to leverage client id and secret on this API proxy. Hint: load variables with [Apigee Access](http://apigee.com/docs/api-services/content/using-apigee-access).
+The following code is the only element that is necessary to protect resources with Basic Authentication. Please keep in mind that you can also leverage [Apigee Developer Model](http://apigee.com/docs/management/apis/get/organizations/%7Borg_name%7D/developers/%7Bdeveloper_email%7D/apps/%7Bapp_name%7D) to leverage client id and secret on this API proxy. Hint: load variables with [Apigee Access](http://apigee.com/docs/api-services/content/using-apigee-access). For more details about Basic Authentication with Node.js, check more examples [here](http://blog.modulus.io/nodejs-and-express-basic-authentication).
 
 ```javascript
-	app.js
+	//app.js
 	// Authenticator
 	app.use(express.basicAuth(function(user, pass) {
 	"use strict";
