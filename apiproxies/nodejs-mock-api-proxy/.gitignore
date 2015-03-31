@@ -1,0 +1,8 @@
+
+/node_modules
+target/
+!target/nodejs-mock-api-proxy.zip
+report.xml
+checkstyle.xml
+results.html
+results.txt
