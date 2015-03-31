@@ -1,4 +1,4 @@
-How to leverage NPM private modules?
+How to host NPM private modules?
 ======
 It's very common to try to leverage private modules for many reasons. For instance, I work at a company that doesn't want to expose my code to the open community. Or maybe the code is too specific that, it doesn't solve a common problem, that the open community will not benefit from it. The following steps piggy bag on the StackOverflow question posted [here](http://stackoverflow.com/questions/10386310/how-to-install-a-private-npm-module-without-my-own-registry).
 
