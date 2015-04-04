@@ -88,3 +88,27 @@ Another option to host your packages privately with a cloud provider such as [Ge
 #### Option 6: Host a private replicating entire couchDB
 
 Another option is [replicate the entire couchDB](https://github.com/npm/npm-registry-couchapp). This approach seems to be the official one. However, I'd take it with a grain of salt. For small projects, I'd start with a hybrid approach, by leveraging public NPM for public modules and private modules, leverage options 1, 2, or 3.
+
+#### Option 7: npm link - symlink to local package
+
+Npm comes with handy way to create a globally-installed symbolic link to any package, which can be used from another package. In our case, npm-package1 is symlinked:
+
+```bash
+$ cd npm-package1
+$ npm link
+/usr/local/lib/node_modules/npm-package1 -> /Users/ApigeeCorporation/Documents/tools/git/apigee-tutorials/apiproxies/npm-local-private-module/npm-package1
+```
+
+Then use reference npm link from npm-main:
+```bash
+$ cd npm-main
+$ npm link npm-package1
+
+unbuild npm-package1@1.0.0
+/Users/ApigeeCorporation/Documents/tools/git/apigee-tutorials/apiproxies/npm-local-private-module/npm-main/node_modules/npm-package1 -> /usr/local/lib/node_modules/npm-package1 -> /Users/ApigeeCorporation/Documents/tools/git/apigee-tutorials/apiproxies/npm-local-private-module/npm-package1
+
+$ ls node_modules
+express      npm-package1
+```
+
+**Please be aware that dependencies between modules can be managed by using capabilities from Git. Git Subtreee or Submodules can provide the ability to retrieve source code from other repos. Also, tools such as Grunt can provide the ability to automate steps to create links and set references.**
