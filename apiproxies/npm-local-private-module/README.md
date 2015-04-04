@@ -91,7 +91,9 @@ Another option is [replicate the entire couchDB](https://github.com/npm/npm-regi
 
 #### Option 7: npm link - symlink to local package
 
-Npm comes with handy way to create a globally-installed symbolic link to any package, which can be used from another package. In our case, npm-package1 is symlinked:
+Npm comes with handy way to create a globally-installed symbolic link to any package, which can be used from another package. Golo Roden explains it well in (this video)[http://www.sitepoint.com/using-npm-link-node-js/]. Here's the sequence of steps to make npm-package1 available for npm-main package:
+
+In our case, npm-package1 is symlinked:
 
 ```bash
 $ cd npm-package1
@@ -111,4 +113,4 @@ $ ls node_modules
 express      npm-package1
 ```
 
-**Please be aware that dependencies between modules can be managed by using capabilities from Git. Git Subtreee or Submodules can provide the ability to retrieve source code from other repos. Also, tools such as Grunt can provide the ability to automate steps to create links and set references.**
+**Please be aware that dependencies between modules can be managed by using capabilities from Git. Git Subtreee or Submodules can provide the ability to retrieve source code from other repos. Also, tools such as [Apigee Deploy Grunt Plugin](https://github.com/dzuluaga/generator-apigee-deploy-grunt-api) along with [shell target](https://github.com/dzuluaga/generator-apigee-deploy-grunt-api/blob/master/app/templates/Gruntfile.js#L139) or can provide the ability to automate steps to create links and set references.**
