@@ -25,7 +25,9 @@ It's very common to try to leverage private modules for many reasons. For instan
 **npm-local-private-modules to the rescue!!!**
 
 <div style="text-align:center" markdown="1">
+
 ![Ways to host NPM Private Modules](https://www.dropbox.com/s/60loa8wi3r7n8f9/Screenshot%202015-04-06%2010.54.55.png?dl=1)
+
 </div>
 
 Essentially, a local module is another module that exists on the filesystem or the network e.g. Git. Let's try the first one:
