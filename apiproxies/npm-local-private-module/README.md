@@ -22,9 +22,10 @@ How to host NPM private modules?
 ======
 It's very common to try to leverage private modules for many reasons. For instance, I work at a company that doesn't want to expose my code to the open community. Or maybe the code is too specific that, it doesn't solve a common problem, that the open community will not benefit from it. The following steps piggy bag on the StackOverflow question posted [here](http://stackoverflow.com/questions/10386310/how-to-install-a-private-npm-module-without-my-own-registry).
 
-![Ways to host NPM Private Modules](https://www.dropbox.com/s/60loa8wi3r7n8f9/Screenshot%202015-04-06%2010.54.55.png?dl=1)
-
 **npm-local-private-modules to the rescue!!!**
+
+->![Ways to host NPM Private Modules](https://www.dropbox.com/s/60loa8wi3r7n8f9/Screenshot%202015-04-06%2010.54.55.png?dl=1)<-
+
 
 Essentially, a local module is another module that exists on the filesystem or the network e.g. Git. Let's try the first one:
 
