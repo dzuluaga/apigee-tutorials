@@ -98,7 +98,7 @@ $ npm install "https://npmrepouser:passw0rd@testmyapi-test.apigee.net/npm-privat
 Since we're using, in this case, plain old Web Server capabilities, an example of this file stored in Dropbox can be this [one](https://www.dropbox.com/s/t6rbdqijhft6pb8/npm-package1-1.0.0.tgz?dl=1). The downside of leveraging services such as Dropbox is that folder are either protected with non-basic authentication or completely public.
 
 ##### Option 3.1: NPM modules exists over the network - Git
-In a similar fashion to Option #3, private modules can be stored in a Git repo branch or tag. For instance, 
+In a similar fashion to Option #3, private modules can be stored in a Git repo branch or tag. For instance, npm-package1 can be downloaded using either git or https as follows:
 
 ###### Master branch
 ```javascript
@@ -119,7 +119,7 @@ In a similar fashion to Option #3, private modules can be stored in a Git repo b
 Similar to branches, tags can be referenced with anchors. In this case, references can be made to specific branches managed by [SemVer](http://semver.org/).
 ```javascript
   "dependencies": {
-    "npm-package1": "git+https://761dfb5440d5335f1f7a784d69f3fa8e13807d87:github.com/dzuluaga/npm-package1.git#v.1.0.0"
+    "npm-package1": "git+https://:github.com/dzuluaga/npm-package1.git#v.1.0.0"
   }
 ```
 
