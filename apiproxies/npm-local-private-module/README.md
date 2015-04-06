@@ -126,7 +126,6 @@ Similar to branches, tags can be referenced with anchors. In this case, referenc
 ###### with Basic Authentication for Private Git repo
 Github private repos in Github can be referenced by providing a Github token. For further details, see [response in StackOverflow](http://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json).
 See [Creating an access token for command line use](https://help.github.com/articles/creating-an-access-token-for-command-line-use/). See usage Via [OAuth Tokens](https://developer.github.com/v3/auth/#via-oauth-tokens).
-https://developer.github.com/v3/auth/#basic-authentication
 ```javascript
   "dependencies": {
     "npm-package1": "git+https://{GITHUB_TOKEN}:x-oauth-basic@github.com/dzuluaga/npm-package1.git#v.1.0.0"
