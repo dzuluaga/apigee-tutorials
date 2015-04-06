@@ -5,8 +5,12 @@
 - [How to host NPM private modules?](#how-to-host-npm-private-modules)
       - [Option 1: Node module exists in the filesystem](#option-1-node-module-exists-in-the-filesystem)
       - [Option 2: Node module exists in the filesystem as a gzipped tarball](#option-2-node-module-exists-in-the-filesystem-as-a-gzipped-tarball)
-      - [Option 3: Node module exists on the network](#option-3-node-module-exists-on-the-network)
-        - [Option 3.1: Node modules exists on the network - Github](#option-31-node-modules-exists-on-the-network---github)
+      - [Option 3: Node module exists over the network](#option-3-node-module-exists-over-the-network)
+        - [Option 3.1: NPM modules exists over the network - Git](#option-31-npm-modules-exists-over-the-network---git)
+          - [Master branch](#master-branch)
+          - [Common branch](#common-branch)
+          - [Tag](#tag)
+          - [with Basic Authentication for Private Git repo](#with-basic-authentication-for-private-git-repo)
       - [Option 4: Host a private repo on a cloud provider](#option-4-host-a-private-repo-on-a-cloud-provider)
       - [Option 5: Host a private repo without replicating entire couchDB](#option-5-host-a-private-repo-without-replicating-entire-couchdb)
       - [Option 6: Host a private replicating entire couchDB](#option-6-host-a-private-replicating-entire-couchdb)
@@ -75,7 +79,7 @@ npm install ../npm-package1/npm-package1-1.0.0.tgz --save
 ```
 **The downside of this approach is that the file requires to be stored in a location that is available on the filesystem, therefore it'd be required to download it locally either with Git Submodules or to copy them on the same branch, not recommended.**
 
-#### Option 3: Node module exists on the network
+#### Option 3: Node module exists over the network
 A network location is another convenient way to store modules in a central location. For instance: Apigee Edge with Basic Authentication, AWS S3, Dropbox, Google Drive, etc.
 
 ```bash
@@ -93,7 +97,7 @@ $ npm install "https://npmrepouser:passw0rd@testmyapi-test.apigee.net/npm-privat
 
 Since we're using, in this case, plain old Web Server capabilities, an example of this file stored in Dropbox can be this [one](https://www.dropbox.com/s/t6rbdqijhft6pb8/npm-package1-1.0.0.tgz?dl=1). The downside of leveraging services such as Dropbox is that folder are either protected with non-basic authentication or completely public.
 
-##### Option 3.1: Node modules exists on the network - Git
+##### Option 3.1: NPM modules exists over the network - Git
 In a similar fashion to Option #3, private modules can be stored in a Git repo branch or tag. For instance, 
 
 ###### Master branch
