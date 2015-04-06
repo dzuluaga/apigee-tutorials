@@ -1,3 +1,19 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [How to host NPM private modules?](#how-to-host-npm-private-modules)
+      - [Option 1: Node module exists in the filesystem](#option-1-node-module-exists-in-the-filesystem)
+      - [Option 2: Node module exists in the filesystem as a gzipped tarball](#option-2-node-module-exists-in-the-filesystem-as-a-gzipped-tarball)
+      - [Option 3: Node module exists on the network](#option-3-node-module-exists-on-the-network)
+        - [Option 3.1: Node modules exists on the network - Github](#option-31-node-modules-exists-on-the-network---github)
+      - [Option 4: Host a private repo on a cloud provider](#option-4-host-a-private-repo-on-a-cloud-provider)
+      - [Option 5: Host a private repo without replicating entire couchDB](#option-5-host-a-private-repo-without-replicating-entire-couchdb)
+      - [Option 6: Host a private replicating entire couchDB](#option-6-host-a-private-replicating-entire-couchdb)
+      - [Option 7: npm link - symlink to local package](#option-7-npm-link---symlink-to-local-package)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 How to host NPM private modules?
 ======
 It's very common to try to leverage private modules for many reasons. For instance, I work at a company that doesn't want to expose my code to the open community. Or maybe the code is too specific that, it doesn't solve a common problem, that the open community will not benefit from it. The following steps piggy bag on the StackOverflow question posted [here](http://stackoverflow.com/questions/10386310/how-to-install-a-private-npm-module-without-my-own-registry).
@@ -76,6 +92,44 @@ $ npm install "https://npmrepouser:passw0rd@testmyapi-test.apigee.net/npm-privat
 ```
 
 Since we're using, in this case, plain old Web Server capabilities, an example of this file stored in Dropbox can be this [one](https://www.dropbox.com/s/t6rbdqijhft6pb8/npm-package1-1.0.0.tgz?dl=1). The downside of leveraging services such as Dropbox is that folder are either protected with non-basic authentication or completely public.
+
+##### Option 3.1: Node modules exists on the network - Git
+In a similar fashion to Option #3, private modules can be stored in a Git repo branch or tag. For instance, 
+
+###### Master branch
+```javascript
+  "dependencies": {
+    "npm-package1": "git+https://github.com/dzuluaga/npm-package1.git"
+  }
+```
+
+###### Common branch
+[StackOverflow question about referencing git branches with anchors.](http://stackoverflow.com/questions/16350673/depend-on-a-branch-using-a-git-url-in-a-package-json)
+```javascript
+  "dependencies": {
+    "npm-package1": "git+https://github.com/dzuluaga/npm-package1.git#common"
+  }
+```
+
+###### Tag
+Similar to branches, tags can be referenced with anchors. In this case, references can be made to specific branches managed by [SemVer](http://semver.org/).
+```javascript
+  "dependencies": {
+    "npm-package1": "git+https://761dfb5440d5335f1f7a784d69f3fa8e13807d87:github.com/dzuluaga/npm-package1.git#v.1.0.0"
+  }
+```
+
+###### with Basic Authentication for Private Git repo
+Github private repos in Github can be referenced by providing a Github token. For further details, see [response in StackOverflow](http://stackoverflow.com/questions/23210437/npm-install-private-github-repositories-by-dependency-in-package-json).
+See [Creating an access token for command line use](https://help.github.com/articles/creating-an-access-token-for-command-line-use/). See usage Via [OAuth Tokens](https://developer.github.com/v3/auth/#via-oauth-tokens).
+https://developer.github.com/v3/auth/#basic-authentication
+```javascript
+  "dependencies": {
+    "npm-package1": "git+https://{GITHUB_TOKEN}:x-oauth-basic@github.com/dzuluaga/npm-package1.git#v.1.0.0"
+  }
+```
+
+**Please be aware of risks of token leaks in package.json file, therefore it is recommended to assess security before implementing this approach.**
 
 #### Option 4: Host a private repo on a cloud provider
 
