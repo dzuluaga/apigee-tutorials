@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <Flows/>
+    <PreFlow name="PreFlow">
+        <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>Assign-Message-Remove-Suffix</Name>
+                </Step>            
+        </Request>
+        <Response/>
+    </PreFlow>
+    <HTTPTargetConnection>
+        <URL>http://weather.yahooapis.com/forecastrss</URL>
+    </HTTPTargetConnection>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+</TargetEndpoint>
