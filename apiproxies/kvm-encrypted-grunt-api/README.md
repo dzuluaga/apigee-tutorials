@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [How to safely store and deploy configuration data in Source Control for API Proxies](#how-to-safely-store-and-deploy-configuration-data-in-source-control-for-api-proxies)
+    - [1. Encryption](#1-encryption)
+    - [2. Decryption](#2-decryption)
+    - [3. Remove decrypted files](#3-remove-decrypted-files)
+    - [4. Deploy this API Proxy](#4-deploy-this-api-proxy)
+    - [5. Test this API Proxy](#5-test-this-api-proxy)
+    - [6. How does it work?](#6-how-does-it-work)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## How to safely store and deploy configuration data in Source Control for API Proxies
 
 The following how-to-guide provides an example of an Apigee API Proxy instrumented with Apigee Grunt Plugin extension to protect clear text sensitive files from being stored in version control. It leverages [Grunt-Contrib-Crypt](https://www.npmjs.com/package/grunt-contrib-crypt) and [grunt-apigee-kvm import](https://www.npmjs.com/package/grunt-apigee-kvm) plugin to decrypt, encrypt, import KVM entries, and deploy API Proxies into Apigee Edge through the Management API.
