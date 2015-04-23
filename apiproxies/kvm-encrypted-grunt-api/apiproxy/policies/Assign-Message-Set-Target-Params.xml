@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Set-Target-Params">
+    <DisplayName>Assign Message Set Target Params</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+        <Verb>GET</Verb>
+          <QueryParams>
+            <QueryParam name="w">{w2}</QueryParam>
+            <QueryParam name="password">{Yahoo_Weather_Password}</QueryParam>
+          </QueryParams>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

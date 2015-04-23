@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="Key-Value-Map-Get-Targets" mapIdentifier="targets">
+    <DisplayName>Key Value Map Get Targets</DisplayName>
+    <FaultRules/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Get assignTo="Yahoo_Weather_Target">
+        <Key>
+            <Parameter>Yahoo_Weather_Target</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="Yahoo_Weather_Password">
+        <Key>
+            <Parameter>Yahoo_Weather_Password</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

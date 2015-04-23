@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <Flows>
+        <Flow name="all">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>Key-Value-Map-Get-Targets</Name>
+                </Step>
+            </Request>
+            <Response>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/apigee&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+        <Flow name="forecastweather_node">
+            <Description/>
+            <Request/>
+            <Response>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/forecastweather_node/**&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+    </Flows>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <HTTPProxyConnection>
+        <BasePath>/kvm-encrypted-grunt-api</BasePath>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <Condition>(proxy.pathsuffix MatchesPath &quot;/apigee&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+</ProxyEndpoint>
