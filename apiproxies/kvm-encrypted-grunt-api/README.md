@@ -16,8 +16,6 @@
 
 The following how-to-guide provides an example of an Apigee API Proxy instrumented with Apigee Grunt Plugin to protect clear text sensitive files from being stored in version control. It leverages [Grunt-Contrib-Crypt](https://www.npmjs.com/package/grunt-contrib-crypt) and [grunt-apigee-kvm import](https://www.npmjs.com/package/grunt-apigee-kvm) plugin to decrypt, encrypt, import KVM entries, and deploy API Proxies into Apigee Edge through the Management API.
 
-This approach is based on John Resig's article ["Keeping Passwords in Source Control"](http://ejohn.org/blog/keeping-passwords-in-source-control/#postcomment).
-
 The following steps can be executed in the same order, in which files are first time encrypted, and then the clear text version of them is removed from the folders. Let's have a look:
 
 #### 1. Encryption
@@ -97,3 +95,6 @@ We will use a Key Value Maps Operations Policy (Key-Value-Map-Get-Targets) to re
  "KVM Set Target and Password variables")
 
 **Caveat: KVMs will still be visible with the tracetool. Therefore, it is highly recommended to leverage still Node.js Apigee Vault in case security requirements demands stricter security. [The following article](https://community.apigee.com/articles/2825/storing-credentialssensitive-config-kvm-vs-vault.html) describes these options in further detail.**
+
+#### 7. References
+This approach is based on John Resig's article ["Keeping Passwords in Source Control"](http://ejohn.org/blog/keeping-passwords-in-source-control/#postcomment). Depending on your security requirements, it might be okay or not to implement this type of encryption. Please make sure you run it by security team.
