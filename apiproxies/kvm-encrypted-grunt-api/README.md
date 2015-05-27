@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [How to safely store and deploy configuration data in Source Control for API Proxies](#how-to-safely-store-and-deploy-configuration-data-in-source-control-for-api-proxies)
+- [How to store and import passwords in Source Control safely Proxies](#how-to-safely-store-and-deploy-configuration-data-in-source-control-for-api-proxies)
     - [1. Encryption](#1-encryption)
     - [2. Decryption](#2-decryption)
     - [3. Remove decrypted files](#3-remove-decrypted-files)
@@ -12,9 +12,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## How to safely store and deploy configuration data in Source Control for API Proxies
+## How to store and import passwords in Source Control safely
 
-The following how-to-guide provides an example of an Apigee API Proxy instrumented with Apigee Grunt Plugin extension to protect clear text sensitive files from being stored in version control. It leverages [Grunt-Contrib-Crypt](https://www.npmjs.com/package/grunt-contrib-crypt) and [grunt-apigee-kvm import](https://www.npmjs.com/package/grunt-apigee-kvm) plugin to decrypt, encrypt, import KVM entries, and deploy API Proxies into Apigee Edge through the Management API.
+The following how-to-guide provides an example of an Apigee API Proxy instrumented with Apigee Grunt Plugin to protect clear text sensitive files from being stored in version control. It leverages [Grunt-Contrib-Crypt](https://www.npmjs.com/package/grunt-contrib-crypt) and [grunt-apigee-kvm import](https://www.npmjs.com/package/grunt-apigee-kvm) plugin to decrypt, encrypt, import KVM entries, and deploy API Proxies into Apigee Edge through the Management API.
 
 The following steps can be executed in the same order, in which files are first time encrypted, and then the clear text version of them is removed from the folders. Let's have a look:
 
@@ -44,6 +44,8 @@ This command should produce a string like this one under config/kbm/testmyapi-te
 ```
 
 **Please be aware of storing the key in a safe place. Since the build process is expected to execute these steps as well, make sure that these environment variables are safely stored. Jenkins and Travis support safe variables.**
+
+Encryption is based [aes-256-cbc](https://github.com/openhoat/kruptos/blob/d862788873e3b744b22e2fc61017ae4af4ede9f1/lib/kruptos-util-crypt.js#L6) implemented on [crypto.js module](https://www.npmjs.com/package/crypto).
 
 #### 2. Decryption
 Files encrypted can be decrypted by running the following command:
@@ -93,3 +95,6 @@ We will use a Key Value Maps Operations Policy (Key-Value-Map-Get-Targets) to re
  "KVM Set Target and Password variables")
 
 **Caveat: KVMs will still be visible with the tracetool. Therefore, it is highly recommended to leverage still Node.js Apigee Vault in case security requirements demands stricter security. [The following article](https://community.apigee.com/articles/2825/storing-credentialssensitive-config-kvm-vs-vault.html) describes these options in further detail.**
+
+#### 7. References
+This approach is based on John Resig's article ["Keeping Passwords in Source Control"](http://ejohn.org/blog/keeping-passwords-in-source-control/#postcomment). Depending on your security requirements, it might be okay or not to implement this type of encryption. Please make sure you run it by your security team.
