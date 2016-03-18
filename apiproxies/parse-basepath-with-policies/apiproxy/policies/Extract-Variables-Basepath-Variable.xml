@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-Basepath-Variable">
+    <DisplayName>Extract Variables-Basepath-Variable</DisplayName>
+    <Source>message.uri</Source>
+    <URIPath>
+        <Pattern ignoreCase="true">/test-basepath-extract/{id}/test</Pattern>
+        <Pattern ignoreCase="true">/{id2}</Pattern>
+    </URIPath>
+    <!--<VariablePrefix>urirequest</VariablePrefix>-->
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

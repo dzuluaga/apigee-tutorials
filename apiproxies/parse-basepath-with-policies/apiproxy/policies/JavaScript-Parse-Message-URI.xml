@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="JavaScript-Parse-Message-URI">
+    <DisplayName>JavaScript-Parse-Message-URI</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://JavaScript-1.js</ResourceURL>
+</Javascript>

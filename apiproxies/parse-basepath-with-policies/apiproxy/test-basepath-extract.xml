@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="test-basepath-extract">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1458322240424</CreatedAt>
+    <CreatedBy>dzuluaga@apigee.com</CreatedBy>
+    <DisplayName>test-basepath-extract</DisplayName>
+    <LastModifiedAt>1458323761104</LastModifiedAt>
+    <LastModifiedBy>dzuluaga@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>Extract-Variables-Basepath-Variable</Policy>
+        <Policy>JavaScript-Parse-Message-URI</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JavaScript-1.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>
