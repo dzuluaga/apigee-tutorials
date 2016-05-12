@@ -27,6 +27,8 @@ Generate the signature by leveraging an online tool such as [OAuth Google Code](
 
 Note Authorization Header in cURL command is replaced by the value generated from OAuth Google Code above.
 
+Alternatively, you can view try Node.js Modules to generate the signature. Take a look at this answer on [Apigee Community](https://community.apigee.com/questions/24163/oauth10-authentication-failing-on-post-succeeds-on.html#answer-24172) to generate a signature using JavaScript.
+
 ```bash
 curl https://testmyapi-test.apigee.net/oauth10a/request-token -H 'Authorization: OAuth realm="",oauth_callback="oob",oauth_version="1.0",oauth_consumer_key="Csgk9z6lfHk98Jjaa85UgwsZTVfZqCsf",oauth_timestamp="1419958125",oauth_nonce="lK9pirgOBrz",oauth_signature_method="HMAC-SHA1",oauth_signature="my4Xw73uqCZ4TAsIlFdZniXjCRw%3D"'
 ```
