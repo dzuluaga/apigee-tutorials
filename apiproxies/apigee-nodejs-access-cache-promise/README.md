@@ -54,3 +54,39 @@ function getCache(key) {
 }
 
 ```
+
+### How to deploy this API Proxy
+
+Clone this directory:
+```bash
+$ npm install
+```
+
+```
+apigeetool deploynodeapp -n apigee-access-nodejs-cache-promise -d . -m app.js -o testmyapi -e test -b /apigee-access-nodejs-cache-promise -u $ae_username -p $ae_password -V
+```
+
+### How to test this API Proxy
+
+#### Store Key/Value in Cache
+
+```
+$ curl http://testmyapi-test.apigee.net/apigee-access-nodejs-cache-promise\?key\=name\&value\=1234 -X POST
+okay%
+```
+
+#### Retrieve a Key/Value from Cache
+
+```bash
+$ curl http://testmyapi-test.apigee.net/apigee-access-nodejs-cache-promise\?key\=name -X GET
+Key/Value retrieved from cache: 1234%
+```
+
+**Note response with Key/Value retrieved from cache.**
+
+#### Retrieve a non-existing Key/Value in Cache
+
+```bash
+$ curl http://testmyapi-test.apigee.net/apigee-access-nodejs-cache-promise\?key\=invalid -X GET
+Key/Value not found in cache%
+```
