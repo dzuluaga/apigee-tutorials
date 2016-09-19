@@ -23,3 +23,6 @@ This command will return an image:
 ```bash
 $ curl https://testmyapi-test.apigee.net/apigee-nodejs-fileserver/images/tree.jpg -v
 ```
+
+#### Deploy bundle without Grunt
+[Download API Bundle](./apigee-nodejs-fileserver.zip) and deploy directly via Edge UI.
