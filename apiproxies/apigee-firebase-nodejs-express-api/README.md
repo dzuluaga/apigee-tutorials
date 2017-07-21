@@ -22,6 +22,8 @@ apigeetool deploynodeapp -n apigee-firebase-nodejs-express-ap
 i -d . -m index.js -o $YOUR_ORG -e test -b /apigee-firebase-nodejs-express-api -u $ae_username -p $
 ae_password -V
 ```
+##### Deploy zip file
+*If you want to avoid installing `apigeetool`, you can also deploy with Edge UI apigee-firebase-nodejs-express-api.zip file with all artifacts in it. Make sure to edit target.xml with proper environment variables for Firebase./*
 
 Run
 ===
