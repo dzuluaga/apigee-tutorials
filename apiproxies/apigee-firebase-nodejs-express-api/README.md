@@ -1,10 +1,8 @@
 apigee-firebase-nodejs-express-api
 ==================================
-How to setup Apigee in the middle between Apps and Firebase? This API Proxy provides the building blocks to get you started on this with functional independente Node.js code to run on your machine as well on Apigee Edge connected to a Database on Firebase.
+How to setup Apigee in the middle between Apps and Firebase? This API Proxy provides the building blocks to get you started with a Express and Node.js App connected to Firebase leveraging official SDK. This Apps runs locally on your machine as well on Apigee Edge connected to a Database on Firebase.
 
---------        --------------        --------------  
-| Apps |  <->   | Apigee Edge |  <->  |  Firebase  |
---------        --------------        --------------
+![API Mediation with Apigee and Firebase](./images/apigee-proxy-firebase.png "apigee proxy and firebase for API Mediation")
 
 ##Getting Started
 
