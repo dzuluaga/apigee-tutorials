@@ -60,7 +60,7 @@ curl -X POST http://testmyapi-test.apigee.net/apigee-firebase-nodejs-express-api
 **Empty body, so Edge doesn\'t complain.**
 
 ```
-![alt text](/images/create_arrays_in_firebase.png "create array in firebase")
+![alt text](./images/create_arrays_in_firebase.png "create array in firebase")
 
 #### Read records from Firebase
 
