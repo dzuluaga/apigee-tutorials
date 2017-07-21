@@ -1,0 +1,21 @@
+{
+  "name": "apigee-firebase-nodejs-express-api",
+  "version": "1.0.0",
+  "description": "Sample API Proxy that connects to Firebase using a Node.js App running locally and on Apigee Edge. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "apigee",
+    "firebase",
+    "node.js",
+    "express"
+  ],
+  "author": "Diego Zuluaga",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.15.3",
+    "firebase": "^4.1.3"
+  }
+}
