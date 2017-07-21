@@ -1,8 +1,15 @@
 apigee-firebase-nodejs-express-api
 ==================================
+How to setup Apigee in the middle between Apps and Firebase? This API Proxy provides the building blocks to get you started on this with functional independente Node.js code to run on your machine as well on Apigee Edge connected to a Database on Firebase.
 
-Run and Deploy
-======
+--------        --------------        --------------  
+| Apps |  <->   | Apigee Edge |  <->  |  Firebase  |
+--------        --------------        --------------
+
+##Getting Started
+
+### Run and Deploy
+
 #### Run locally
 ```bash
 $ npm install
@@ -69,14 +76,14 @@ $ curl -X GET http://localhost:3000/products
 
 Returns:
 
-[{"description":"Android Newborn Pacifier","id":"123"},{"description":"Android Pixel","id":"345"},{"description":"Chromecast Ultra","id":"223"}]
+[{"description":"Androi`d Newborn Pacifier","id":"123"},{"description":"Android Pixel","id":"345"},{"description":"Chromecast Ultra","id":"223"}]
 
 #### Test in Edge
 $ curl -X GET http://testmyapi-test.apigee.net/apigee-firebase-nodejs-express-api/products
 ```
 
 #### How to configure environment variables in Edge for Node.js
-You noticed that there in order to protect from leaking credentials in your source code, we used process.env variables as below. In order to set these variable, it is recommended to leverage EnvironmentVariables from TargetEndpoint as below.
+As security best practice you noticed that in order to protect from leaking credentials in your source code, we used process.env variables as below. Therefore, to set these variable, it is recommended to leverage EnvironmentVariables from TargetEndpoint in the next section.
 
 ```javascript
 var config = {
