@@ -4,13 +4,14 @@ How to setup Apigee in the middle between Apps and Firebase? This API Proxy prov
 
 ![API Mediation with Apigee and Firebase](./images/apigee-proxy-firebase.png "apigee proxy and firebase for API Mediation")
 
-##Getting Started
+## Getting Started
 
 ### Run and Deploy
 
-#### Run locally
+#### Install dependencies and Run
 ```bash
 $ npm install
+$ node index.js
 ```
 
 #### Deploy to Apigee Edge
@@ -18,7 +19,7 @@ $ npm install
 To deploy this API Proxy to Edge, make sure apigeetool is installed in your machine.
 ```bash
 apigeetool deploynodeapp -n apigee-firebase-nodejs-express-ap
-i -d . -m index.js -o testmyapi -e test -b /apigee-firebase-nodejs-express-api -u $ae_username -p $
+i -d . -m index.js -o $YOUR_ORG -e test -b /apigee-firebase-nodejs-express-api -u $ae_username -p $
 ae_password -V
 ```
 
