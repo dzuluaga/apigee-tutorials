@@ -31,10 +31,10 @@ What if instead of a waterfall approach, requests could happen in parallel. So i
 *So request calls to your backend will look like this:*
 
 ```
-  request 1
-  request 2
-  request 3
-  request n...
+-->  request 1
+-->  request 2
+-->  request 3
+-->  request n...
   (each request taking ~1 second, but calls happening in parallel)
 ```
 
@@ -74,23 +74,21 @@ You can keep adding elements dynamically to the list. However, yours API won't g
 #### Test with cURL locally
 
 ```bash
-curl http://localhost:3000/albums\?artists\[\]=depeche+mode\&artists\[\]=radiohead\&artists\[\]\=phoenix -v --globoff
+curl http://localhost:3000/albums?artists[]=depeche+mode&artists[]=radiohead&artists[]=phoenix -v --globoff
 ```
 
-#### Test on Edge Cloud
-Import parallel-promise-nodejs-api-proxy.zip into Edge.
+#### Test on Edge Cloud - Deploy the zip file
+If you want to test API Proxy, you can either import [parallel-promise-nodejs-api-proxy.zip](./parallel-promise-nodejs-api-proxy.zip) into Edge or use Apigeetool to import it manually.
+
 ```bash
-curl https://testmyapi-test.apigee.net/parallel-promise-nodejs-api/albums\?artists\[\]=depeche+mode\&artists\[\]=radiohead\&artists\[\]\=phoenix -v --globoff
+curl https://testmyapi-test.apigee.net/parallel-promise-nodejs-api/albums?artists[]=depeche+mode&artists[]=radiohead&artists[]=phoenix -v --globoff
 ```
 
 #### Deploy to Edge with ApigeeTool
-
+Make sure you replace the placeholders $org, $ae_username, and $ae_password with your own organization and credentials.
 ```bash
-$ apigeetool deploynodeapp -n parallel-promise-nodejs-api -d . -m server.js -o testmyapi -e test -b /parallel-promise-nodejs-api -u $ae_username -p $ae_password -v secure -V
+$ apigeetool deploynodeapp -n parallel-promise-nodejs-api -d . -m server.js -o $org -e test -b /parallel-promise-nodejs-api -u $ae_username -p $ae_password -v secure -V
 ```
-
-##### Grab Zip file and Deploy
-Sign up for an account on [Apigee Edge](http://enterprise.apigee.com) and deploy parallel-promise-nodejs-api.zip.
 
 #### How it works
 
@@ -131,4 +129,4 @@ function getAlbum(artist) {
 
 #### Let me know your thoughts
 
-Check Apigee Community Post. @TODO Link here.
+Check Apigee Community [Post](https://community.apigee.com/questions/45475/how-can-we-make-a-call-asynchronously-through-node.html).
