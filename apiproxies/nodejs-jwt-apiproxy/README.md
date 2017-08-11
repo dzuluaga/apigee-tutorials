@@ -107,13 +107,13 @@ validate token:
 
 Step 3: Deploy to Edge
 ==============
+Import [node-jwt-apiproxy.zip](node-jwt-apiproxy.zip) file and deploy Proxy on [Edge UI](http://enterprise.apigee.com).
+
 This API Proxy can be deployed to Edge running the following command:
 ```bash
 $ apigeetool deploynodeapp -n nodejs-jwt-apiproxy -d . -m app.js -o $org_name -e test -b /nodejs-jwt-apiproxy -u $ae_username -p $ae_password -V
 ```
 
 **$org_name, $ae_username, $ae_password are placeholders for your info after you sign up for Edge.**
-
-@TODO Generate zip file and use Edge UI to deploy
 
 **the code presented in this repo is intented for didactical purposes. Please make sure you consult with your API Team architects and developers before trying it out in production**
