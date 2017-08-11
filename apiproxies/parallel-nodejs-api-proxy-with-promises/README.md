@@ -9,24 +9,24 @@ Build a Node.js API Proxy that makes http requests to a backend in parallel and 
 
 Promises will make your code easier to read and maintain. In compare to:
  
-- *The callback pattern*, which in my opinion becomes messy very quickly by creating nested levels of code execution. There are numerous articles about this pattent denominated [callback hell](http://callbackhell.com/).
+- *The callback pattern*, which in my opinion becomes messy very quickly by creating nested levels of code execution. There are numerous articles about this pattern commonly coined [callback hell](http://callbackhell.com/).
 
-- Async, most JS newbies discover async and fall in love with it. However, async module dictates the design of your code in a way that feel orchestrated rather than choreograped. Archestration requires a central module to control the execution. In my opinion, this pattern is helpful to solve the problem of parallel execution, however code is harder to become modular by building more independent components that talk to each other.  
+- Async, most JS newbies, discover async and fall in love with it. However, async module dictates the design of your code in a way that feels orchestrated rather than choreographed. Orchestration requires a central module to control the execution. In my opinion, this pattern is helpful to solve the problem of parallel execution; however code is harder to become modular by building more independent components that talk to each other.  
 
-#### So, how do we solve the problem of sequential calls?
-Making calls to your backend in a sequential or waterfall fashion is not sustainable. Imagine making `n` calls, each one taking 1 second. As a result, 10 calls will take 10 seconds to complete, as each subsequent call will need to wait for the previous call to complete, blocking the execution of each subsequent call. Your API will suffer of serious performance issues rather quickly.
+#### So, how do we solve the problem of requests in sequence?
+Making calls to your backend in a sequential or waterfall fashion is not sustainable. Imagine making `n` calls, each one taking 1 second. As a result, ten calls will take 10 seconds to complete, as each subsequent call will need to wait for the previous call to complete, blocking the execution of each subsequent call. Your API will suffer from serious performance issues rather quickly.
 
 *Sequential Request calls to your backend will look like this:*
 ```
   request 1
           --> request 2
                       --> request 3
-                                  --> request n... (each request taking ~1 second)
+                                  --> request n...(each request taking ~1 second
 ```
 
 #### Solve sequential call with parallel calls
 
-What if instead of a waterfall approach, requests could happen in parallel. So intead of 10 seconds from last example, it'd take only 1 second or less in total.
+What if instead of a waterfall approach, requests could happen in parallel. So instead of 10 seconds from the last example, it'd take only 1 second or less in total.
 
 *So request calls to your backend will look like this:*
 
@@ -69,7 +69,7 @@ The output of this API will return an array with three artists in it:
 
 Note artists query param following array format with  leading brackets `[]`. So, you can keep adding elements to the array. Try adding a new artist to the query string &artists[]=the+lumineers.
 
-You can keep adding elements dynamically to the list. However, yours API won't get slower, as you your calls are executed in parallel.
+You can keep adding elements dynamically to the list. However, yours API won't get slower, as your calls are executed in parallel.
 
 #### Test with cURL locally
 
