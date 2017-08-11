@@ -1,0 +1,109 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'qrco' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.4
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData qrco
+8 silly fetchNamedPackageData qrco
+9 silly mapToRegistry name qrco
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'qrco',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'qrco',
+12 silly mapToRegistry   name: 'qrco',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/qrco
+14 verbose request uri https://registry.npmjs.org/qrco
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 9:18:40 PM
+17 verbose request using bearer token for auth
+18 verbose request id 69b2fb02a9a84f02
+19 http request GET https://registry.npmjs.org/qrco
+20 http 404 https://registry.npmjs.org/qrco
+21 verbose headers { 'content-type': 'application/json',
+21 verbose headers   'cache-control': 'max-age=0',
+21 verbose headers   'content-length': '2',
+21 verbose headers   'accept-ranges': 'bytes',
+21 verbose headers   date: 'Sat, 15 Jul 2017 04:18:43 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-sjc3642-SJC',
+21 verbose headers   'x-cache': 'MISS',
+21 verbose headers   'x-cache-hits': '0',
+21 verbose headers   'x-timer': 'S1500092323.245467,VS0,VE243',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 404,
+22 silly get   { 'content-type': 'application/json',
+22 silly get     'cache-control': 'max-age=0',
+22 silly get     'content-length': '2',
+22 silly get     'accept-ranges': 'bytes',
+22 silly get     date: 'Sat, 15 Jul 2017 04:18:43 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-sjc3642-SJC',
+22 silly get     'x-cache': 'MISS',
+22 silly get     'x-cache-hits': '0',
+22 silly get     'x-timer': 'S1500092323.245467,VS0,VE243',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/qrco
+23 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+23 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+23 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+23 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+23 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+23 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+23 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+23 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+23 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+23 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+23 silly fetchPackageMetaData  error for qrco { Error: Registry returned 404 for GET on https://registry.npmjs.org/qrco
+23 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+23 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+23 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+23 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+23 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+23 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+23 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+23 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+23 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+23 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12) pkgid: 'qrco', statusCode: 404, code: 'E404' }
+24 silly rollbackFailedOptional Starting
+25 silly rollbackFailedOptional Finishing
+26 silly runTopLevelLifecycles Finishing
+27 silly install printInstalled
+28 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/qrco
+28 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+28 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+28 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+28 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+28 verbose stack     at emitTwo (events.js:106:13)
+28 verbose stack     at Request.emit (events.js:191:7)
+28 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+28 verbose stack     at emitOne (events.js:96:13)
+28 verbose stack     at Request.emit (events.js:188:7)
+28 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+29 verbose statusCode 404
+30 verbose pkgid qrco
+31 verbose cwd /Users/diegozuluaga/tools/git/apigee-tutorials/apiproxies/nodejs-jwt-apiproxy
+32 error Darwin 16.6.0
+33 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "qrco"
+34 error node v6.9.4
+35 error npm  v3.10.10
+36 error code E404
+37 error 404 Registry returned 404 for GET on https://registry.npmjs.org/qrco
+38 error 404
+39 error 404 'qrco' is not in the npm registry.
+40 error 404 You should bug the author to publish it (or use the name yourself!)
+41 error 404 Note that you can also install from a
+42 error 404 tarball, folder, http url, or git url.
+43 verbose exit [ 1, true ]

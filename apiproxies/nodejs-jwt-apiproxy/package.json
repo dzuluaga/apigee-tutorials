@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-jwt-apiproxy",
+  "version": "1.0.0",
+  "description": "Sample of JWT Apigee API Proxy running on Edge.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzuluaga/apigee-tutorials.git"
+  },
+  "keywords": [
+    "jwt",
+    "nodejs"
+  ],
+  "author": "Diego Zuluaga",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dzuluaga/apigee-tutorials/issues"
+  },
+  "homepage": "https://github.com/dzuluaga/apigee-tutorials#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1"
+  }
+}
