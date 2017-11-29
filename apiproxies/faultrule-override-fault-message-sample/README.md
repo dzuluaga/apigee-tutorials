@@ -21,6 +21,14 @@ curl http://testmyapi-test.apigee.net/faultrule-override-fault-message-sample/re
 
 ### How to deploy this API Proxy
 
+#### Import API Proxy Zip File (bundle) through UI
+
+#### Use apigeetool
 ```bash
 apigeetool deployproxy  -u $ae_username -p $ae_password -o testmyapi -e test -n faultrule-override-fault-message-sample -d . -V
+```
+
+#### Import API Proxy Through Management API
+```bash
+curl -X POST -u $ae_username:$ae_password -F "file=@faultrule-override-fault-message-sample.zip" "https://api.enterprise.apigee.com/v1/organizations/testmyapi/apis?action=import&name=faultrule-override-fault-message-sample"
 ```
