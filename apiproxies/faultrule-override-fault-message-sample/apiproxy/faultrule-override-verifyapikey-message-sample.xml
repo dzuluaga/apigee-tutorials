@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="faultrule-override-verifyapikey-message-sample">
+    <Basepaths>/faultrule-override-verifyapikey-message-sample</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1511930762671</CreatedAt>
+    <CreatedBy>diegozuluaga@google.com</CreatedBy>
+    <Description>Sample API Proxy to demonstrate how to execute Faultrules and override messages</Description>
+    <DisplayName>faultrule-override-verifyapikey-message-sample</DisplayName>
+    <LastModifiedAt>1511933611244</LastModifiedAt>
+    <LastModifiedBy>diegozuluaga@google.com</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Message-Set-Response-Payload</Policy>
+        <Policy>JavaScript-Get-Fault-Variable</Policy>
+        <Policy>Raise-Fault</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JavaScript-Get-Fault-Variable.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

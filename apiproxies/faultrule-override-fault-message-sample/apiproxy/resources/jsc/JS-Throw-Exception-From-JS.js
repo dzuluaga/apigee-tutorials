@@ -1,0 +1,1 @@
+throw new Error('User-Defined exception thrown from JS.');

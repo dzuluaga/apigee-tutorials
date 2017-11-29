@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="FaultRule-Set-Response-Payload">
+            <Step>
+                <Name>Assign-Message-Set-Response-Payload</Name>
+            </Step>
+            <Step>
+                <Name>Assign-Message-Set-Header</Name>
+            </Step>
+            <Condition>(fault.name = "RaiseFault")</Condition>
+        </FaultRule>
+        <FaultRule name="FaultRule-Catch-JS-ScriptExecutionFailed">
+            <Step>
+                <Name>Assign-Message-Set-Response-JS-Exception</Name>
+            </Step>
+            <Condition>(fault.name = "ScriptExecutionFailed")</Condition>
+        </FaultRule>
+    </FaultRules>
+    <DefaultFaultRule name="default-fault">
+        <Step>
+            <Name>Assign-Message-Default-Message</Name>
+        </Step>
+    </DefaultFaultRule>
+    <PreFlow name="PreFlow">
+        <Request>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="Flow-Resource-That-Raise-User-Defined-Faults">
+            <Description/>
+            <Condition>(proxy.pathsuffix MatchesPath "/resource-that-raises-user-defined-faults")</Condition>
+            <Request>
+                <Step>
+                    <Name>Raise-Fault-User-Defined</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+        <Flow name="Flow-Resource-That-Throws-JS-Exception">
+            <Description/>
+            <Condition>(proxy.pathsuffix MatchesPath "/resource-that-throws-js-exception")</Condition>
+            <Request>
+                <Step>
+                    <Name>JS-Throw-Exception-From-JS</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+        <Flow name="Flow-Resource-That-Returns-500-Status-Code">
+            <Description/>
+            <Condition>(proxy.pathsuffix MatchesPath "/resource-that-returns-500-status-code")</Condition>
+            <Request/>
+            <Response/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/faultrule-override-fault-message-sample</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="TargetEndpoint-Raise-500">
+        <Condition>(proxy.pathsuffix MatchesPath "/resource-that-returns-500-status-code")</Condition>
+        <TargetEndpoint>TargetEndpoint-Raise-500</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Set-Header">
+    <DisplayName>Assign Message-Set-Header</DisplayName>
+    <Add>
+        <Headers>
+            <Header name="X-Header-See-Sequence-In-Trace">This policy executes after. {proxy.client.ip}</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

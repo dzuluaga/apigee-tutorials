@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Default-Message">
+    <DisplayName>Assign-Message-Default-Message</DisplayName>
+    <Set>
+        <Payload contentType="application/json">{"message":"default message captured when backend return error response."}</Payload>
+        <StatusCode>911</StatusCode>
+        <ReasonPhrase>Handled error response status code from backend</ReasonPhrase>
+    </Set>
+    <Add>
+        <Headers>
+            <Header name="X-Message-Manualy-Set-By">Assign-Message-Policy</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

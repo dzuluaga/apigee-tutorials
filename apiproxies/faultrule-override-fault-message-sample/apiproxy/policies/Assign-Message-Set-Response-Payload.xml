@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Set-Response-Payload">
+    <DisplayName>Assign Message-Set-Response-Payload</DisplayName>
+    <Set>
+        <Payload contentType="application/json">{"message":"error generated manualy using an AssignMessage Policy after a RaiseFault Policy triggers exception fault flow. {organization.name} "}</Payload>
+        <StatusCode>911</StatusCode>
+        <ReasonPhrase>Manualy Raised by AssignMessage Policy. Check fault.name = 'RaiseFault'</ReasonPhrase>
+    </Set>
+    <Add>
+        <Headers>
+            <Header name="X-Message-Manualy-Set-By">Assign-Message-Policy</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

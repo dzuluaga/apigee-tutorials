@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Message-Set-Response-JS-Exception">
+    <DisplayName>Assign-Message-Set-Response-JS-Exception</DisplayName>
+    <Set>
+        <Payload contentType="application/json">{"message":"error caught when JS Policy throws a user-defined exception."}</Payload>
+        <StatusCode>911</StatusCode>
+        <ReasonPhrase>Thrown by a JS user-defined exception</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
