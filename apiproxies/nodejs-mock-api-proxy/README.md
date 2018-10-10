@@ -5,7 +5,7 @@ The purpose of this API Proxy is to provide the tools to develop API proxies wit
 #### What is the use case for this?
 It is common when building APIs to start testing, design, and development without a backend. Also, even when the backend is ready, you may want continue to run tests in isolation, without hitting the backend. The following image describes the process of testing using mock HTTP responses. However, this is easier to say than done when the solution is built from scratch. In this tutorial, I'll be providing some recommendations in terms of frameworks and a reference architecture to implement this approach based on best practices.
 
-![HTTP Mocking](https://www.dropbox.com/s/clvtcf31cfu3j9c/HTTP%20Mocking.png?dl=1 "HTTP Mocking")
+![HTTP Mocking](./images/HTTP_Mocking.png "HTTP Mocking")
 
 #### A few recommendations
 
